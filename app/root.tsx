@@ -66,29 +66,24 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <div className="flex flex-col h-screen mx-2">
-          <nav className="flex h-16 items-center width-full">
-            <Link to="/">
-              <img src={logo} width="200" alt="Logo" />
-            </Link>
-          </nav>
-          <div className="flex h-8 items-center bg-gray-100">
-            A Remix Stack for MongoDB
-          </div>
-          <div className="flex flex-1 overflow-hidden">
-            <aside className="hidden sm:block my-1 w-64 overflow-y-auto">
-              <ul className="list-none">
-                <li><Link to="/movies">Movies</Link></li>
-                <li><Link to="/movies/add"> * Add</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="https://www.mongodb.com/docs/drivers/node/current/">MongoDB Driver docs</Link></li>
-              </ul>
-            </aside>
-            <main className="flex flex-1 my-1 overflow-y-auto paragraph px-4">
-              {children}
-            </main>
-          </div>
-          <div className="flex bg-gray-100">Fork this on &nbsp;<Link to="https://github.com/mongodb-developer/remix">Github</Link></div>
+        <nav className="flex h-16 items-center width-full">
+          <Link to="/">
+            <img src={logo} width="200" alt="Logo" />
+          </Link>
+        </nav>
+        <div className="flex h-8 items-center bg-gray-100">
+          A Remix Stack for MongoDB
         </div>
+        <div className="flex flex-1 overflow-hidden justify-center items-center">
+          <main className="flex flex-1 my-1 overflow-y-auto paragraph px-4">
+            {children}
+          </main>
+        </div>
+        <div className="flex bg-gray-100">
+          Fork this on &nbsp;
+          <Link to="https://github.com/mongodb-developer/remix">Github</Link>
+        </div>
+      </div>
     </>
   );
 }
